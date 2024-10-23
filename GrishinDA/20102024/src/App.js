@@ -35,9 +35,9 @@ const ProductCard = ({ product }) => {
 
 const App = () => {
   const products = [
-    { id: 1, name: 'Товар 1', price: 100 },
-    { id: 2, name: 'Товар 2', price: 200 },
-    { id: 3, name: 'Товар 3', price: 300 },
+    { id: 1, name: 'Intel Core I5 - 13600f', price: 100 },
+    { id: 2, name: 'GTX 1660 Super', price: 200 },
+    { id: 3, name: 'RTX 3060 STORM X', price: 300 },
   ];
 
   return (
