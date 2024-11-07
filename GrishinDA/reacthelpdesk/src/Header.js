@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css"
+import { Link } from "react-router-dom";
 
 function Header(){
     return (
@@ -8,13 +9,10 @@ function Header(){
   <div className="current-time" id="currentDateTime" />
   <div className="nav">
     <div className="tab active" data-tab="formContainer">
-      Создать заявку
+      <Link to="/Application"><button>Создать заявку</button></Link>
     </div>
     <div className="tab" data-tab="ticketList">
-      Все заявки
-    </div>
-    <div className="tab" data-tab="calendarEvents">
-      Календарь событий
+    <Link to="/History"><button>Все заявки</button></Link>
     </div>
   </div>
 </div>

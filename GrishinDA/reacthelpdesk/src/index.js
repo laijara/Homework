@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.css';
 import Header from './Header';
-import Main from './Main';
+import Application from './Application';
 import Footer from './Footer';
+import History from './History';
+import { Route, Routes } from 'react-router-dom';
 
 const header = ReactDOM.createRoot(document.getElementById('header'));
 header.render(
@@ -12,10 +14,21 @@ header.render(
   </React.StrictMode>
 );
 
-const main = ReactDOM.createRoot(document.getElementById('main'));
-main.render(
+const application = ReactDOM.createRoot(document.getElementById('main'));
+application.render(
   <React.StrictMode>
-    <Main />
+    <Routes>
+      <Route path='/Application' element={<Application/>}/>
+    </Routes>
+  </React.StrictMode>
+);
+
+const history = ReactDOM.createRoot(document.getElementById('main'));
+history.render(
+  <React.StrictMode>
+      <Routes>
+      <Route path='/History' element={<History/>}/>
+    </Routes>
   </React.StrictMode>
 );
 
@@ -25,4 +38,5 @@ footer.render(
     <Footer />
   </React.StrictMode>
 );
+
 

@@ -1,7 +1,7 @@
 import React from "react";
-import "./main.css";
+import "./Application.css";
 
-function Main(){
+function Application(){
     return(
         <div className="form-container tab-content active" id="formContainer">
   <form id="ticketForm">
@@ -31,4 +31,4 @@ function Main(){
     );
 }
 
-export default Main;
+export default Application ;
