@@ -9,12 +9,14 @@ function Header(){
   <div className="current-time" id="currentDateTime" />
   <div className="nav">
     <div className="tab active" data-tab="formContainer">
-      <Link to="/Application"><button>Создать заявку</button></Link>
-    </div>
-    <div className="tab" data-tab="ticketList">
-    <Link to="/History"><button>Все заявки</button></Link>
-    </div>
+      <div>
+        <Link to="/"><button>Все заявки</button></Link>
+      </div>
+      <div>
+        <Link to="/application"><button>Создать заявку</button></Link>
+      </div>
   </div>
+</div>
 </div>
     );
 }

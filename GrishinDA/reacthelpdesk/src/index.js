@@ -2,41 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.css';
 import Header from './Header';
-import Application from './Application';
 import Footer from './Footer';
 import History from './History';
-import { Route, Routes } from 'react-router-dom';
+import Application from './Application';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-const header = ReactDOM.createRoot(document.getElementById('header'));
-header.render(
+const content = ReactDOM.createRoot(document.getElementById('contentreact'));
+content.render(
   <React.StrictMode>
-    <Header />
-  </React.StrictMode>
-);
-
-const application = ReactDOM.createRoot(document.getElementById('main'));
-application.render(
-  <React.StrictMode>
-    <Routes>
-      <Route path='/Application' element={<Application/>}/>
-    </Routes>
-  </React.StrictMode>
-);
-
-const history = ReactDOM.createRoot(document.getElementById('main'));
-history.render(
-  <React.StrictMode>
+    <Router>
+      <header id="header">
+      <Header></Header>
+      </header>
+      <main id="main">
       <Routes>
-      <Route path='/History' element={<History/>}/>
-    </Routes>
+        <Route path="/" element={<History />}> </Route>
+        <Route path="/application" element={<Application />}> </Route>
+      </Routes>
+      </main>
+      <footer id="footer">
+      <Footer></Footer>
+      </footer>
+    </Router>
   </React.StrictMode>
 );
-
-const footer = ReactDOM.createRoot(document.getElementById('footer'));
-footer.render(
-  <React.StrictMode>
-    <Footer />
-  </React.StrictMode>
-);
-
-
