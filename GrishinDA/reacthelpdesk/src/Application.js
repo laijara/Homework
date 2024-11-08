@@ -26,6 +26,10 @@ function Application(){
     <input type="time" id="time" required="" />
     <input type="submit" defaultValue="Создать заявку" />
   </form>
+  <div className = "photocontent_img" id="photocontent">
+    <img src="/Cat.jpg"></img>
+    <alt>Котька</alt>
+  </div>
 </div>
 
     );
