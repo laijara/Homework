@@ -14,12 +14,11 @@ while True:
         print("Такого номера игры не существует!")
         continue
     if 1 <= GameSelection <= quantity_games:
+        os.system("cls")
         match GameSelection:
             case 1:
-                os.system("cls")
                 game_random()
             case 2:
-                os.system("cls")
                 game_numbers()
         break
     else:
