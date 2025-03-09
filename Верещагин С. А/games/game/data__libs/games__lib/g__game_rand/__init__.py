@@ -1,0 +1,1 @@
+__all__ = ['game_rand_func', 'game_rand_start.py']
